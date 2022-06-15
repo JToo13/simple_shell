@@ -3,7 +3,7 @@
 /**
  * get_builtin - Builtin
  * @cmd: Cmd
- * Return: Function pointer of the builtin cmd
+ * Return: A function pointer of the builtin cmd
  */
 int (*get_builtin(char *cmd))(data_shell *)
 {
