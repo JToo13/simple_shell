@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * free_data - Frees data struct
+ * free_data - It frees data struct
  *
  * @datash: data struct
  * Return: Void
