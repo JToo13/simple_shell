@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * swap_char - swaps | and & for non-printed chars
+ * swap_char - It swaps | and & for non-printed chars
  *
  * @input: input string
  * @bool: type of swap
