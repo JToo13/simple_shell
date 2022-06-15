@@ -1,1 +1,1 @@
-This is a README files for the repository on the simple shell group/pair project
+This is a README file for the repository on the simple shell group/pair project
