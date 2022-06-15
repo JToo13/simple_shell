@@ -2,47 +2,47 @@
 /**
  * free_data - Frees data struct
  *
- * @datast: data struct
+ * @datash: data struct
  * Return: Void
  */
-void free_data(data_shell *datast)
+void free_data(data_shell *datash)
 {
 	unsigned int i;
 
 	for (i = 0; datash->_environ[i]; i++)
-		free(datast->_environ[i]);
+		free(datash->_environ[i]);
 
-	free(datast->_environ);
-	free(datast->pid);
+	free(datash->_environ);
+	free(datash->pid);
 }
 
 /**
  * set_data - Initialize data structure
  *
- * @datast: Data struct
+ * @datash: Data struct
  * @av: Argument vector
  * Return: Void
  */
-void set_data(data_shell *datast, char **av)
+void set_data(data_shell *datash, char **av)
 {
 	unsigned int i;
 
-	datast->av = av;
-	datast->input = NULL;
-	datast->args = NULL;
-	datast->status = 0;
-	datast->counter = 1;
+	datash->av = av;
+	datash->input = NULL;
+	datash->args = NULL;
+	datash->status = 0;
+	datash->counter = 1;
 
 	for (i = 0; environ[i]; i++)
 		;
 
-	datast->_environ = malloc(sizeof(char *) * (i + 1));
+	datash->_environ = malloc(sizeof(char *) * (i + 1));
 
 	for (i = 0; environ[i]; i++)
-		datast->_environ[i] = _strdup(environ[i]);
+		datash->_environ[i] = _strdup(environ[i]);
 
-	datast->_environ[i] = NULL;
-	datast->pid = aux_itoa(getpid());
+	datash->_environ[i] = NULL;
+	datash->pid = aux_itoa(getpid());
 }
 
 /**
@@ -54,14 +54,14 @@ void set_data(data_shell *datast, char **av)
  */
 int main(int ac, char **av)
 {
-	data_shell datast;
+	data_shell datash;
 	(void) ac;
 
 	signal(SIGINT, get_sigint);
-	set_data(&datast, av);
-	shell_loop(&datast);
-	free_data(&datast);
-	if (datast.status < 0)
+	set_data(&datash, av);
+	shell_loop(&datash);
+	free_data(&datash);
+	if (datash.status < 0)
 		return (255);
-	return (datast.status);
+	return (datash.status);
 }
