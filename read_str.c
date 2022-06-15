@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * read_line -Reads input string
+ * read_line -Reads the input string
  *
  * @i_eof: Returns value of getline function
  * Return: Input string
