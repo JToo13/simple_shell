@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * bring_line - Assigns line variable for get_line
+ * bring_line - It assigns line variable for get_line
  * @lineptr: Buffer with input str
  * @buffer: String that called to line
  * @n: Line size
