@@ -20,7 +20,7 @@
 extern char **environ;
 
 /**
- * struct data - Struct with all relevant runtime data
+ * struct data - Struct with all the relevant runtime data
  * @av: Argument Vector
  * @input: Cmd line
  * @args: Tokens of the cmd line
