@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * exec_line - Executes builtins and handles commands
+ * exec_line - Executes builtins and handles the commands
  *
  * @datash: data relevant (args)
  * Return: 1 for success
